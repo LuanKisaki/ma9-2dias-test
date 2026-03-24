@@ -19,8 +19,6 @@ Você deverá desenvolver uma aplicação web para gerenciamento de produtos de 
   - Por categoria
   - Por faixa de preço
   - Por status (Ativo/Inativo)
-- Upload de imagem do produto
-  - Pode ser envio real para API, simulação local (mock) ou armazenamento em memória/localStorage
 
 ---
 
@@ -30,15 +28,11 @@ Você deverá desenvolver uma aplicação web para gerenciamento de produtos de 
 - TypeScript
 - Estilização com SCSS
 - Estrutura organizada (ex.: arquitetura por módulos, camadas ou feature-based)
-- Consumo de API REST (real ou mockada)
+- Consumo de API REST (utilize [json-server](https://www.npmjs.com/package/json-server) para criar um mock de uma API)
 - Formulários com validação
 - Boas práticas (componentização, legibilidade, organização de estado)
 - Testes em pelo menos uma parte da regra de negócio (ex.: serviço, validação, filtro)
 - Diferencial técnico: uso de biblioteca de gerenciamento de estado (ex.: NgRx, Redux Toolkit, Zustand, Pinia, Vuex, Akita ou Elf)
-
-> **Nota importante:** é **extremamente recomendado** utilizar **mock** para simular os dados e operações da API durante o desenvolvimento da prova.
->
-> Caso opte por integração real, você pode consumir uma **API gratuita de terceiros** (por exemplo, APIs públicas), desde que documente claramente no README como foi feita a integração. Também pode utilizar API própria.
 
 ---
 
