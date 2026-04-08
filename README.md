@@ -9,6 +9,7 @@ Bem-vindo(a)! Esta é sua prova prática para a vaga de Desenvolvedor Front-end.
 Você deverá desenvolver uma aplicação web para gerenciamento de produtos de um e-commerce.
 
 > A aplicação deve ser construída com um **framework front-end moderno** (ex.: **Angular**, **React** ou **Vue**), utilizando **TypeScript** e **SCSS**.
+> Evite utilizar de forma exagerada IA para o desenvolvimento desta prova, visto que todas implementações serão questionadas em uma outra entrevista
 
 ### Funcionalidades obrigatórias
 
