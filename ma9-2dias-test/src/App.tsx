@@ -33,14 +33,15 @@ function App() {
               flexDirection: "column",
               gap: "0.5rem",
               width: "300px",
-              textAlign: "left"
+              textAlign: "left",
+              minHeight: "200px",
             }}
             >
             <h2 style={{textAlign:"center"}}>{product.name}</h2>
             <p style={{ fontWeight: "bold" }}>Categoria: {product.category}</p>
             <p>Preço: R$ {product.price}</p>
-            <p>Description: {product.description ? product.description : <i>O produto não possui descrição.</i>}</p>
             <p>Status: {product.active ? "Ativo" : "Inativo"}</p>
+            <p>Description: {product.description ? product.description : <i>O produto não possui descrição.</i>}</p>
           </div>
         </div>
       ))}
