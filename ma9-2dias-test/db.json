@@ -1,5 +1,5 @@
 {
-  "produtcts": [
+  "products": [
     {
       "id": 1,
       "name": "Produto 1",
@@ -12,7 +12,7 @@
       "id": 2,
       "name": "Produto 2",
       "category": "Roupas",
-      "description": "Descrição do Produto 2",
+      "description": "",
       "price": 49.90,
       "active": true
     },
