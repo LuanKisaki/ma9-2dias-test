@@ -120,7 +120,7 @@ input[type=text], input[type=number], textarea, select {
   transition: all 0.2s ease;
   border-radius: var(--border-radius);
   border: 1px solid var(--border);
-  padding-left: .2rem;
+  padding-left: .5rem;
   width: 100%;
   border: 1px solid var(--border);
   border-radius: var(--border-radius);
@@ -136,9 +136,7 @@ textarea {
 
 input::placeholder, textarea::placeholder {
   font-weight: bold;
-  padding: .5rem;
   opacity: 0.5;
-  font-size: 14px;
 }
 
 .card {
@@ -158,4 +156,18 @@ input::placeholder, textarea::placeholder {
   width: 300px;
   text-align: left;
   min-height: 310px;
+}
+
+.card__actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.filters__content {
+  display: flex;
+  gap: 1rem;
+  margin: 0 2rem;
 }

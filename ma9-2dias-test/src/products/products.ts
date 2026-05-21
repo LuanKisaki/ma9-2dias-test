@@ -1,5 +1,5 @@
 export type Product = {
-  id: string; // id está com tipo string, pois o json-server gera ids como strings. Se fosse um banco de dados real, o id provavelmente seria um número e seu tipo number.
+  id: string; // id está com tipo string, pois o json-server gera ids como strings. Se fosse um banco de dados real, o id seria um número e seu tipo number.
   name: string;
   category: string;
   description?: string;

@@ -37,7 +37,7 @@ export async function createProduct(product: Omit<Product, "id">): Promise<Produ
   return res.json();
 }
 
-export async function ToggleActiveProduct(id: string, product: Omit<Product, "id">): Promise<Product> {
+export async function toggleActiveProduct(id: string, product: Omit<Product, "id">): Promise<Product> {
   const res = await fetch(`${API_URL}/${id}`, {
     method: "PUT",
     headers: {
