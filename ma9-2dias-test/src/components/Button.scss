@@ -1,0 +1,22 @@
+.button {
+	margin-top: auto;
+	padding: 0.5rem 1rem;
+	background-color: rgba(89, 89, 89, 0.2);
+	border-style: solid;
+	border-width: thin;
+	cursor: pointer;
+
+	font-size: 14px;
+
+	&--primary {
+		border-color: #0081c2;
+	}
+
+	&--warning {
+		border-color: #ffbb33;
+	}
+
+	&--danger {
+		border-color: #ff4444;
+	}
+}

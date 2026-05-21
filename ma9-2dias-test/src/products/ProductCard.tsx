@@ -1,3 +1,5 @@
+import { Card } from "../components/Card";
+import { Button } from "../components/Button";
 import type { Product } from "./products";
 
 type ProductCardProps = {
@@ -12,10 +14,13 @@ export function ProductCard({
   onDelete,
 }: ProductCardProps) {
   return (
-    <div className="card">
+    <Card>
       <div className="card__content">
         <h2>{product.name}</h2>
-        <p><strong>Categoria:</strong> {product.category}</p>
+        <p>
+          <strong>Categoria:</strong>
+          {product.category}
+        </p>
         <p>Preço: R$ {product.price.toFixed(2)}</p>
         <p>Status: {product.active ? "Ativo" : "Inativo"}</p>
         <p>
@@ -25,38 +30,21 @@ export function ProductCard({
       </div>
 
       <div className="card__actions" style={{ display: "flex", flexDirection: "column", gap: ".5rem", justifyContent: "center" }}>
-        <button 
+
+        <Button
           onClick={() => onToggleActive(product.id)}
-          style={{
-                  marginTop: "auto",
-                  padding: "0.5rem 1rem",
-                  backgroundColor: "rgba(89, 89, 89, 0.2)",
-                  borderStyle: "solid",
-                  borderWidth: "thin",
-                  borderColor: product.active ? "#ffbb33" : "#0081c2",
-                  cursor: "pointer",
-                  fontSize: "14px",
-                }}
+          variant={product.active ? "warning" : "primary"}
         >
           {product.active ? "Desativar" : "Ativar"}
-        </button>
+        </Button>
 
-        <button 
+        <Button
           onClick={() => onDelete(product.id)}
-          style={{
-                  marginTop: "auto",
-                  padding: "0.5rem 1rem",
-                  backgroundColor: "rgba(89, 89, 89, 0.2)",
-                  borderStyle: "solid",
-                  borderWidth: "thin",
-                  borderColor: "#ff4444",
-                  cursor: "pointer",
-                  fontSize: "14px"
-                }}
+          variant="danger"
         >
           Excluir
-        </button>
+        </Button>
       </div>
-    </div>
+    </Card>
   );
 }

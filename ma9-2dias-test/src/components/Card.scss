@@ -1,0 +1,21 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.card__actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}

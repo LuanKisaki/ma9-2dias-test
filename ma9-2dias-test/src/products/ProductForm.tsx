@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Product } from "./products"; // Importa o tipo Product do arquivo products.ts para ser usado na definição do tipo ProductFormProps e no estado do formulário.
+import { Button } from "../components/Button";
 
 type ProductFormProps = {
   onSubmit: (data: Omit<Product, "id">) => Promise<void>; // Promise<void> indica que a função onSubmit é assíncrona e não retorna nenhum valor. O tipo Omit<Product, "id"> é usado para indicar que o objeto de dados passado para onSubmit deve ter todas as propriedades do tipo Product, exceto a propriedade id.
@@ -47,10 +48,10 @@ export function ProductForm({ onSubmit, onCancel }: ProductFormProps) {
     >
       <form
         onSubmit={handleSubmit}
-        style={{ 
-          display: "flex", 
-          flexDirection: "column", 
-          gap: "0.5rem", 
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "0.5rem",
           width: "320px",
           padding: "1rem",
           border: "1px solid aquamarine",
@@ -85,21 +86,28 @@ export function ProductForm({ onSubmit, onCancel }: ProductFormProps) {
             type="checkbox"
             checked={active}
             onChange={(e) => setActive(e.target.checked)}
-            />
-            Status do produto
+          />
+          Status do produto
         </label>
         <textarea
           placeholder="Descrição"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-
-        <button type="submit" disabled={isSaving} style={{ backgroundColor: "#0081c2", color: "white", padding: "0.5rem 1rem", border: "none", cursor: "pointer" }}>
+        <Button
+          type="submit"
+          onClick={handleSubmit}
+          disabled={isSaving}
+          variant="primary"
+        >
           {isSaving ? "Salvando..." : "Salvar"}
-        </button>
-        <button type="button" onClick={onCancel} style={{ backgroundColor: "#ccc", color: "#333", padding: "0.5rem 1rem", border: "none", cursor: "pointer" }}>
+        </Button>
+        <Button 
+          onClick={onCancel} 
+          variant="danger"
+        >
           Cancelar
-        </button>
+        </Button>
         {error && <p style={{ color: "red" }}>{error}</p>}
       </form>
     </div>
