@@ -1,28 +1,37 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Produto 1",
       "category": "Eletronicos",
       "description": "Descrição do Produto 1",
-      "price": 29.90,
+      "price": 29.9,
       "active": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Produto 2",
       "category": "Roupas",
       "description": "",
-      "price": 49.90,
+      "price": 49.9,
       "active": true
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Produto 3",
       "category": "Livros",
       "description": "Descrição do Produto 3",
       "price": 1.99,
-      "active": false
+      "active": true
+    },
+    {
+      "name": "teste criação",
+      "category": "criador",
+      "price": 299.9,
+      "active": true,
+      "description": "criação via front-end",
+      "id": "kNNiP5ZtlSA"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

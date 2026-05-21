@@ -1,13 +1,52 @@
-import type { Product } from "../products/types";
+import type { Product } from "../products/products";
 
 const API_URL = "http://localhost:3004/products";
 
 export async function getProducts(): Promise<Product[]> {
-    const res = await fetch(API_URL);
+  const res = await fetch(API_URL);
 
-    if (!res.ok) {
-        throw new Error("Erro ao buscar produtos");
-    }
+  if (!res.ok) {
+    throw new Error("Erro ao buscar produtos");
+  }
 
-    return res.json();
+  return res.json();
+}
+
+export async function deleteProduct(id: string): Promise<void> {
+  const res = await fetch(`${API_URL}/${id}`, {
+    method: "DELETE",
+  });
+
+  if (!res.ok) {
+    throw new Error("Erro ao deletar produto");
+  }
+}
+
+export async function createProduct(product: Omit<Product, "id">): Promise<Product> {
+  const res = await fetch(API_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(product),
+  });
+
+  if (!res.ok) {
+    throw new Error("Erro ao criar produto");
+  }
+  return res.json();
+}
+
+export async function ToggleActiveProduct(id: string, product: Omit<Product, "id">): Promise<Product> {
+  const res = await fetch(`${API_URL}/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(product),
+  });
+  if (!res.ok) {
+    throw new Error("Erro ao atualizar produto");
+  }
+  return res.json();
 }

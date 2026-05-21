@@ -3,6 +3,7 @@
   --text-h: #08060d;
   --bg: #fff;
   --border: #e5e4e7;
+  --border-radius: 8px;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
@@ -108,4 +109,33 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+div, button {
+  transition: all 0.2s ease;
+  border-radius: var(--border-radius);
+}
+
+input[type=text], input[type=number], textarea {
+  transition: all 0.2s ease;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border);
+  padding-left: .2rem;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  height: 4vh;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 4rem;
+}
+
+input::placeholder, textarea::placeholder {
+  font-weight: bold;
+  padding: .5rem;
+  opacity: 0.5;
+  font-size: 14px;
 }
