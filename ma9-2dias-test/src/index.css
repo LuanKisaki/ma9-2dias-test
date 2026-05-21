@@ -56,7 +56,7 @@
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
+  border: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -116,7 +116,7 @@ div, button {
   border-radius: var(--border-radius);
 }
 
-input[type=text], input[type=number], textarea {
+input[type=text], input[type=number], textarea, select {
   transition: all 0.2s ease;
   border-radius: var(--border-radius);
   border: 1px solid var(--border);
@@ -133,9 +133,29 @@ textarea {
   min-height: 4rem;
 }
 
+
 input::placeholder, textarea::placeholder {
   font-weight: bold;
   padding: .5rem;
   opacity: 0.5;
   font-size: 14px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  background: var(--bg);
+
+  border-style: solid;
+  border-width: thin;
+  border-color: #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 300px;
+  text-align: left;
+  min-height: 310px;
 }

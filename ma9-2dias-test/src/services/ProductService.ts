@@ -28,7 +28,7 @@ export async function createProduct(product: Omit<Product, "id">): Promise<Produ
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(product),
+    body: JSON.stringify(product), // JSON.stringify é usado para converter o objeto product em uma string JSON, que é o formato esperado pelo servidor para os dados enviados no corpo da requisição POST. O método fetch envia essa requisição para o endpoint API_URL, que é onde os produtos são gerenciados no backend.
   });
 
   if (!res.ok) {

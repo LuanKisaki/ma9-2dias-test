@@ -28,7 +28,7 @@
       "name": "teste criação",
       "category": "criador",
       "price": 299.9,
-      "active": true,
+      "active": false,
       "description": "criação via front-end",
       "id": "kNNiP5ZtlSA"
     }
