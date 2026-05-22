@@ -1,5 +1,11 @@
 # 🧪 Cadastro e Consulta de Produtos
 
+
+<img width="965" height="877" alt="image" src="https://github.com/user-attachments/assets/30dc8136-d09a-4cc4-9a4e-e1e4c6cd5ca5" />
+
+
+
+
 Aplicação Front-end desenvolvida como prova prática para gerenciamento de produtos de um e-commerce.
 
 O projeto permite realizar operações de cadastro, edição, exclusão e consulta de produtos utilizando uma API REST simulada com json-server.
