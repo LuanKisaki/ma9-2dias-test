@@ -1,73 +1,152 @@
-# React + TypeScript + Vite
+# 🧪 Cadastro e Consulta de Produtos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação Front-end desenvolvida como prova prática para gerenciamento de produtos de um e-commerce.
 
-Currently, two official plugins are available:
+O projeto permite realizar operações de cadastro, edição, exclusão e consulta de produtos utilizando uma API REST simulada com json-server.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- SCSS
+- Vite
+- JSON Server
+- Vitest
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Funcionalidades
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Produtos
+- Listagem de produtos
+- Cadastro de novos produtos
+- Edição de produtos existentes
+- Exclusão de produtos
+- Alteração de status (Ativo/Inativo)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Filtros
+- Filtrar por categoria
+- Filtrar por faixa de preço
+- Filtrar por status
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Experiência
+- Feedback de carregamento
+- Tratamento básico de erros
+- Interface responsiva
+- Componentização de interface
+
+---
+
+## 🧠 Decisões Técnicas
+
+### Organização por domínio (Feature-based)
+
+Os arquivos relacionados ao gerenciamento de produtos foram agrupados dentro do módulo `products`, concentrando:
+
+- componentes específicos
+- serviços
+- tipos
+- filtros
+- testes
+
+Componentes reutilizáveis foram separados em `components`.
+
+---
+
+## 📁 Estrutura do Projeto
+
+```txt
+src/
+├── components/
+│   ├── Button.scss
+│   ├── Button.tsx
+│   ├── Card.scss
+│   └── Card.tsx
+│
+├── products/
+│   ├── filterProducts.ts
+│   ├── filterProducts.test.ts
+│   ├── ProductCard.tsx
+│   ├── ProductFilters.tsx
+│   ├── ProductForm.tsx
+│   ├── ProductList.scss
+│   ├── ProductList.tsx
+│   ├── products.ts
+│   ├── service.ts
+│   └── service.test.ts
+│
+├── App.tsx
+├── App.css
+├── index.css
+└── main.tsx
+
+public/
+db.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Como executar localmente
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clonar o repositório
+
+```bash
+git clone <https://github.com/LuanKisaki/ma9-2dias-test>
 ```
+
+---
+
+### 2. Instalar dependências
+
+```bash
+npm install
+```
+
+---
+
+### 3. Iniciar API mock
+
+```bash
+npm run server
+```
+
+API disponível em:
+
+```txt
+http://localhost:3004
+```
+
+---
+
+### 4. Iniciar aplicação
+
+```bash
+npm run dev
+```
+
+
+## 🧪 Executar testes
+
+```bash
+npm run test
+```
+
+---
+
+## 📌 Observações
+
+- Projeto desenvolvido utilizando API simulada com json-server.
+- Foco em legibilidade, componentização e simplicidade da solução.
+- Estrutura organizada priorizando separação por domínio e reutilização de componentes.
+
+---
+
+## 🔮 Possíveis Evoluções
+
+- Paginação
+- Persistência real com backend
+- Gerenciamento global de estado
+- Melhorias visuais
+- Testes e2e
