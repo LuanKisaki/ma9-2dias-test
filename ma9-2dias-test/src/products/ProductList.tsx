@@ -4,6 +4,7 @@ import type { Product } from "./products";
 import { ProductForm } from "./ProductForm";
 import { ProductCard } from "./ProductCard";
 import { ProductFilters } from "./ProductFilters";
+import { filterProducts } from "./filterProducts";
 
 export function ProductList() {
   const [products, setProducts] = useState<Product[]>([]);
