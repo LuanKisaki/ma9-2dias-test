@@ -4,6 +4,8 @@ import type { Product } from "./products";
 import { ProductForm } from "./ProductForm";
 import { ProductCard } from "./ProductCard";
 import { ProductFilters } from "./ProductFilters";
+import { Button } from "../components/Button";
+import "./ProductList.scss";
 
 export function ProductList() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -90,7 +92,7 @@ export function ProductList() {
 
   return (
     <main>
-      <div
+      <header
         style={{
           display: "flex",
           flexDirection: "row",
@@ -99,26 +101,15 @@ export function ProductList() {
           gap: "1rem"
         }}
       >
-        <h1 style={{ marginBottom: "4rem" }}>Produtos</h1>
+        <h1>Produtos</h1>
         {!showForm && (
-          <button
+          <Button
             onClick={() => setShowForm(true)}
-            style={{
-              padding: "0.5rem 1rem",
-              marginBottom: "2rem",
-              backgroundColor: "rgba(89, 89, 89, 0.2)",
-              borderStyle: "solid",
-              borderWidth: "thin",
-              borderColor: "#0081c2",
-              cursor: "pointer",
-              fontSize: "14px",
-              height: "fit-content"
-            }}
           >
             Novo Produto
-          </button>
+          </Button>
         )}
-      </div>
+      </header>
       {showForm && (
         <ProductForm
           onSubmit={handleCreateProduct}
