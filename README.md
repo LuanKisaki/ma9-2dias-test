@@ -109,7 +109,7 @@ npm install
 ### 3. Iniciar API mock
 
 ```bash
-npm run server
+npm run json-server
 ```
 
 API disponível em:
