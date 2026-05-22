@@ -31,6 +31,14 @@
       "active": false,
       "description": "criação via front-end",
       "id": "kNNiP5ZtlSA"
+    },
+    {
+      "name": "caixa",
+      "category": "organizador",
+      "price": 10,
+      "active": true,
+      "description": "caixa de plástico ",
+      "id": "C1HDxmgeuWY"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
