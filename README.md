@@ -1,88 +1,152 @@
-# 🧪 Prova Prática Front-end
+# 🧪 Cadastro e Consulta de Produtos
 
-Bem-vindo(a)! Esta é sua prova prática para a vaga de Desenvolvedor Front-end. A ideia é simular um desafio realista do dia a dia de desenvolvimento.
+Aplicação Front-end desenvolvida como prova prática para gerenciamento de produtos de um e-commerce.
 
----
-
-## 📦 Desafio: Cadastro e Consulta de Produtos
-
-Você deverá desenvolver uma aplicação web para gerenciamento de produtos de um e-commerce.
-
-> A aplicação deve ser construída com um **framework front-end moderno** (ex.: **Angular**, **React** ou **Vue**), utilizando **TypeScript** e **SCSS**.
-> Evite utilizar de forma exagerada IA para o desenvolvimento desta prova, visto que todas implementações serão questionadas em uma outra entrevista
-
-### Funcionalidades obrigatórias
-
-- Cadastrar um novo produto
-- Editar produto existente
-- Excluir um produto
-- Consultar lista de produtos com filtros:
-  - Por categoria
-  - Por faixa de preço
-  - Por status (Ativo/Inativo)
+O projeto permite realizar operações de cadastro, edição, exclusão e consulta de produtos utilizando uma API REST simulada com json-server.
 
 ---
 
-## 🛠️ Requisitos Técnicos
+## 🚀 Tecnologias Utilizadas
 
-- Framework front-end moderno (ex.: Angular, React ou Vue — preferencialmente versão atual estável)
+- React
 - TypeScript
-- Estilização com SCSS
-- Estrutura organizada (ex.: arquitetura por módulos, camadas ou feature-based)
-- Consumo de API REST (utilize [json-server](https://www.npmjs.com/package/json-server) para criar um mock de uma API)
-- Formulários com validação
-- Boas práticas (componentização, legibilidade, organização de estado)
-- Testes em pelo menos uma parte da regra de negócio (ex.: serviço, validação, filtro)
-- Diferencial técnico: uso de biblioteca de gerenciamento de estado (ex.: NgRx, Redux Toolkit, Zustand, Pinia, Vuex, Akita ou Elf)
+- SCSS
+- Vite
+- JSON Server
+- Vitest
 
 ---
 
-## 🧩 Requisitos mínimos da interface
+## ✨ Funcionalidades
 
-- Tela de listagem de produtos
-- Tela/formulário de criação e edição
-- Ações de editar e excluir na listagem
-- Filtros visíveis e funcionais
-- Feedback de carregamento/erro/sucesso
-- Layout responsivo básico
+### Produtos
+- Listagem de produtos
+- Cadastro de novos produtos
+- Edição de produtos existentes
+- Exclusão de produtos
+- Alteração de status (Ativo/Inativo)
 
----
+### Filtros
+- Filtrar por categoria
+- Filtrar por faixa de preço
+- Filtrar por status
 
-## ✨ Diferenciais (Bônus)
-
-Estes itens não são obrigatórios, mas contam pontos na avaliação:
-
-- Testes adicionais (unitários e/ou e2e)
-- Documentação da arquitetura/decisões técnicas
-
----
-
-## ✅ Critérios de Avaliação
-
-- Clareza e organização do código
-- Qualidade da componentização e reutilização
-- Uso adequado de boas práticas do framework escolhido e de TypeScript
-- Qualidade visual e responsividade
-- Cobertura e qualidade dos testes
-- Commits claros e bem organizados
-- Facilidade de execução do projeto
+### Experiência
+- Feedback de carregamento
+- Tratamento básico de erros
+- Interface responsiva
+- Componentização de interface
 
 ---
 
-## 🚀 Como Entregar
+## 🧠 Decisões Técnicas
 
-1. Crie um repositório público seu
-2. Desenvolva a prova no seu repositório.
-3. Inclua no seu README instruções claras para rodar o projeto localmente.
-4. Informe as decisões técnicas tomadas (resumo curto).
-5. Quando finalizar, envie o link do seu repositório para a pessoa responsável pelo processo.
+### Organização por domínio (Feature-based)
+
+Os arquivos relacionados ao gerenciamento de produtos foram agrupados dentro do módulo `products`, concentrando:
+
+- componentes específicos
+- serviços
+- tipos
+- filtros
+- testes
+
+Componentes reutilizáveis foram separados em `components`.
 
 ---
 
-## ⏰ Prazo
+## 📁 Estrutura do Projeto
 
-Conforme e-mail encaminhado com o link do desafio.
+```txt
+src/
+├── components/
+│   ├── Button.scss
+│   ├── Button.tsx
+│   ├── Card.scss
+│   └── Card.tsx
+│
+├── products/
+│   ├── filterProducts.ts
+│   ├── filterProducts.test.ts
+│   ├── ProductCard.tsx
+│   ├── ProductFilters.tsx
+│   ├── ProductForm.tsx
+│   ├── ProductList.scss
+│   ├── ProductList.tsx
+│   ├── products.ts
+│   ├── service.ts
+│   └── service.test.ts
+│
+├── App.tsx
+├── App.css
+├── index.css
+└── main.tsx
+
+public/
+db.json
+```
 
 ---
 
-Boa sorte! 💻🚀
+## ⚙️ Como executar localmente
+
+### 1. Clonar o repositório
+
+```bash
+git clone <https://github.com/LuanKisaki/ma9-2dias-test>
+```
+
+---
+
+### 2. Instalar dependências
+
+```bash
+npm install
+```
+
+---
+
+### 3. Iniciar API mock
+
+```bash
+npm run server
+```
+
+API disponível em:
+
+```txt
+http://localhost:3004
+```
+
+---
+
+### 4. Iniciar aplicação
+
+```bash
+npm run dev
+```
+
+
+## 🧪 Executar testes
+
+```bash
+npm run test
+```
+
+---
+
+## 📌 Observações
+
+- Projeto desenvolvido utilizando API simulada com json-server.
+- Foco em legibilidade, componentização e simplicidade da solução.
+- Estrutura organizada priorizando separação por domínio e reutilização de componentes.
+
+---
+
+## 🔮 Possíveis Evoluções
+
+- Paginação
+- Persistência real com backend
+- Gerenciamento global de estado
+- Melhorias visuais
+- Testes e2e
